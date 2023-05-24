@@ -1,0 +1,60 @@
+# Users
+## get users
+curl http://localhost:8080/users
+
+## Post a user
+curl -d '{"username":"jerome","mail":"jerome.delaire@kalima.io","password":"1234"}' -H "Content-Type: application/json" -X POST http://localhost:8080/user
+
+## Get user by username
+curl http://localhost:8080/user/jerome
+ 
+## Get user by mail
+curl http://localhost:8080/user/mail/jerome.delaire@kalima.io
+
+## Update password
+curl -d '{"username":"jerome","password":"1234","newPassword":"abcd"}' -H "Content-Type: application/json" -X POST http://localhost:8080/user/password
+
+# Categorie
+## Get categories for a user
+curl http://localhost:8080/categories/jerome
+
+## Post a new category 
+curl -d '{"username":"delaire","name":"job"}' -H "Content-Type: application/json" -X POST http://localhost:8080/category
+
+## Update name 
+curl -d '{"id":"2","name":"test"}' -H "Content-Type: application/json" -X POST http://localhost:8080/category/update
+
+## Delete
+curl -X DELETE http://localhost:8080/category/10
+
+# Expenses
+## Get expenses for a user
+curl http://localhost:8080/expenses/jerome
+
+## Get by month for a user
+curl http://localhost:8080/expenses/John/2023/05
+
+## Create a new expense
+curl -X POST -H "Content-Type: application/json" -d '{"amount": 15, "category_id": 1, "username": "jerome", "date": "2023-05-01", "description":"test"}' http://localhost:8080/expense
+
+## Update an expense
+curl -X POST -H "Content-Type: application/json" -d '{"id":"3","amount": 150, "category_id": 1, "username": "jerome", "date": "2023-05-01", "description":"test"}' http://localhost:8080/expense/update
+
+## Delete an expense
+curl -X DELETE http://localhost:8080/expense/4
+
+# Incomes
+## Get incomes for a user
+curl http://localhost:8080/incomes/jerome
+
+## get by month
+curl http://localhost:8080/incomes/John/2023/05
+
+## Create a new income
+curl -X POST -H "Content-Type: application/json" -d '{"amount": 1500, "username": "jerome", "date": "2023-05-01", "description":"salaire"}' http://localhost:8080/income
+
+## Update an income
+curl -X POST -H "Content-Type: application/json" -d '{"id":"1","amount": 2500,"username": "jerome", "date": "2023-05-01", "description":"Salaire"}' http://localhost:8080/income/update
+
+## Delete an income
+curl -X DELETE http://localhost:8080/income/1

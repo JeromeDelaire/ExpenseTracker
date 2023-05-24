@@ -1,0 +1,66 @@
+USE expenses_tracker;
+
+INSERT INTO categories (name, username)
+VALUES
+('Food', 'Jérôme Delaire'),
+('Transportation', 'Jérôme Delaire'),
+('Entertainment', 'Jérôme Delaire'),
+('Utilities', 'Jérôme Delaire');
+
+INSERT INTO expenses (amount, description, category_id, date, username)
+VALUES
+(20.50, 'Lunch', 1, '2023-04-01 12:30:00', 'Jérôme Delaire'),
+(12.75, 'Bus fare', 2, '2023-04-02 18:45:00', 'Jérôme Delaire'),
+(8.99, 'Movie ticket', 3, '2023-04-03 21:15:00', 'Jérôme Delaire'),
+(50.00, 'Electricity bill', 4, '2023-04-04 09:00:00', 'Jérôme Delaire'),
+(15.25, 'Dinner', 1, '2023-04-05 20:00:00', 'Jérôme Delaire'),
+(7.50, 'Taxi ride', 2, '2023-04-06 16:30:00', 'Jérôme Delaire'),
+(35.00, 'Internet bill', 4, '2023-04-07 11:15:00', 'Jérôme Delaire'),
+(42.80, 'Groceries', 1, '2023-04-08 10:00:00', 'Jérôme Delaire'),
+(18.25, 'Gasoline', 2, '2023-04-09 14:45:00', 'Jérôme Delaire'),
+(11.99, 'Music streaming', 3, '2023-04-10 19:30:00', 'Jérôme Delaire'),
+(30.00, 'Water bill', 4, '2023-04-11 08:00:00', 'Jérôme Delaire'),
+(25.00, 'Brunch', 1, '2023-04-12 11:00:00', 'Jérôme Delaire'),
+(10.50, 'Train ticket', 2, '2023-04-13 16:20:00', 'Jérôme Delaire'),
+(16.99, 'Netflix subscription', 3, '2023-04-14 21:00:00', 'Jérôme Delaire'),
+(75.00, 'Rent', 4, '2023-04-15 14:00:00', 'Jérôme Delaire'),
+(28.75, 'Lunch', 1, '2023-04-16 12:30:00', 'Jérôme Delaire'),
+(9.25, 'Bus fare', 2, '2023-04-17 08:15:00', 'Jérôme Delaire'),
+(6.99, 'Book', 3, '2023-04-18 17:30:00', 'Jérôme Delaire'),
+(40.00, 'Gas bill', 4, '2023-04-19 09:00:00', 'Jérôme Delaire'),
+(19.99, 'Dinner', 1, '2023-04-20 20:30:00', 'Jérôme Delaire'),
+(8.50, 'Taxi ride', 2, '2023-04-21 22:45:00', 'Jérôme Delaire'),
+(55.00, 'Electricity bill', 4, '2023-04-22 11:00:00', 'Jérôme Delaire'),
+(20.50, 'Lunch', 1, '2023-05-01 12:30:00', 'Jérôme Delaire'),
+(12.75, 'Bus fare', 2, '2023-05-02 15:45:00', 'Jérôme Delaire'),
+(8.99, 'Movie ticket', 3, '2023-05-03 18:20:00', 'Jérôme Delaire'),
+(50.00, 'Electricity bill', 4, '2023-05-04 10:00:00', 'Jérôme Delaire'),
+(25.00, 'Groceries', 1, '2023-05-05 16:30:00', 'Jérôme Delaire'),
+(30.00, 'Dinner with friends', 2, '2023-05-06 20:00:00', 'Jérôme Delaire'),
+(15.50, 'Coffee', 3, '2023-05-07 08:45:00', 'Jérôme Delaire'),
+(100.00, 'Phone bill', 4, '2023-05-08 11:30:00', 'Jérôme Delaire'),
+(50.00, 'Gas', 1, '2023-05-09 14:00:00', 'Jérôme Delaire'),
+(10.00, 'Snacks', 2, '2023-05-10 16:45:00', 'Jérôme Delaire'),
+(20.00, 'Lunch with coworkers', 3, '2023-05-11 12:30:00', 'Jérôme Delaire'),
+(15.00, 'Parking', 4, '2023-05-12 09:00:00', 'Jérôme Delaire'),
+(40.00, 'Movie night', 1, '2023-05-13 20:00:00', 'Jérôme Delaire'),
+(80.00, 'Dinner at restaurant', 2, '2023-05-14 19:30:00', 'Jérôme Delaire'),
+(12.00, 'Bakery', 3, '2023-05-15 11:00:00', 'Jérôme Delaire'),
+(150.00, 'Internet bill', 4, '2023-05-16 16:00:00', 'Jérôme Delaire'),
+(20.00, 'Laundry', 1, '2023-05-17 13:00:00', 'Jérôme Delaire'),
+(25.00, 'Birthday gift', 2, '2023-05-18 14:00:00', 'Jérôme Delaire'),
+(10.50, 'Snacks', 3, '2023-05-19 10:30:00', 'Jérôme Delaire'),
+(50.00, 'Gas', 4, '2023-05-20 09:00:00', 'Jérôme Delaire'),
+(20.00, 'Haircut', 1, '2023-05-21 12:30:00', 'Jérôme Delaire'),
+(15.00, 'Parking', 2, '2023-05-22 11:00:00', 'Jérôme Delaire'),
+(75.00, 'Gym membership', 3, '2023-05-23 17:00:00', 'Jérôme Delaire'),
+(200.00, 'Rent', 4, '2023-05-24 10:00:00', 'Jérôme Delaire');
+
+INSERT INTO incomes (amount, description, date, username)
+VALUES
+(1000.00, 'Salary', '2023-04-01 12:00:00', 'Jérôme Delaire'),
+(500.00, 'Bonus', '2023-04-03 14:30:00', 'Jérôme Delaire'),
+(750.00, 'Freelance work', '2023-04-15 09:00:00', 'Jérôme Delaire'),
+(1200.00, 'Salary', '2023-05-01 12:00:00', 'Jérôme Delaire'),
+(300.00, 'Bonus', '2023-05-03 14:30:00', 'Jérôme Delaire'),
+(600.00, 'Investment income', '2023-05-10 09:00:00', 'Jérôme Delaire');
